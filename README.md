@@ -9,6 +9,15 @@
 ![Untitled Diagram drawio (1)](https://github.com/user-attachments/assets/7b573fe3-2ce5-4dd3-ac97-3e0295feb03d)
 
 
+ #### Requirements:
+* Install:
+   1. Minikube
+   2. Docker
+   3. kubectl
+   4. helm
+   5. Kyverno
+
+
 
 #### Start Minikube cluster:
 ```
