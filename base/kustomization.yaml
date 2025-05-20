@@ -1,0 +1,7 @@
+resources:
+  - gateway/deployment.yaml
+  - gateway/service.yaml
+  - auth-service/deployment.yaml
+  - auth-service/service.yaml
+  - data-service/deployment.yaml
+  - data-service/service.yaml

@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-service
+  namespace: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-service
+  template:
+    metadata:
+      labels:
+        app: data-service
+    spec:
+      serviceAccountName: data-service-sa
+      containers:
+      - name: data
+        image: hashicorp/http-echo
+        args:
+          - "-text=Hello from data service"
+        envFrom:
+        - secretRef:
+            name: minio-credentials
+        ports:
+        - containerPort: 5678
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5678
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 5678
+          initialDelaySeconds: 5
+          periodSeconds: 10

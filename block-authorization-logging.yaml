@@ -1,0 +1,24 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: block-authorization-leak
+spec:
+  validationFailureAction: enforce
+  rules:
+  - name: block-authorization-in-command-or-env
+    match:
+      resources:
+        kinds:
+        - Pod
+    validate:
+      message: "Authorization-related terms should not appear in container args or env (possible secret leak)."
+      anyPattern:
+      - spec:
+          containers:
+          - name: "*"
+            =(args):
+              - "!*Authorization*"
+            =(command):
+              - "!*Authorization*"
+            =(env):
+              - name: "!*Authorization*"

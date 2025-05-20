@@ -1,0 +1,5 @@
+resources:
+  - ../../base
+  - namespaces/system-namespace.yaml
+  - namespaces/app-namespace.yaml
+  - ingress/ingress.yaml
