@@ -70,7 +70,6 @@ Then access:
 ```
 http://gateway.local
 ```
-![MINGW64__c_Users_Rajib_EKS-Style-secure 17-05-2025 21_00_06](https://github.com/user-attachments/assets/710e1e84-f618-42b9-b69c-c732eb1553d5)
 
 
 
@@ -78,6 +77,8 @@ http://gateway.local
 
 
 ![Hello World - Google Chrome 17-05-2025 20_59_11](https://github.com/user-attachments/assets/f169643e-26d7-4939-82c1-582e55e3b72a)
+
+![444880325-f169643e-26d7-4939-82c1-582e55e3b72a](https://github.com/user-attachments/assets/0da0e1d2-f513-44b6-a7c3-50319410e6b0)
 
 
 
