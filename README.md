@@ -157,8 +157,8 @@ Still inside the pod, run:
 ```
 aws --endpoint-url http://minio:9000 s3 ls
 ```
+![444878533-ac20fc59-451f-4556-92d3-751bd1fab07a](https://github.com/user-attachments/assets/f09c852f-520f-4ada-9df0-74a23484bf35)
 
-![MINGW64__c_Users_Rajib_EKS-Style-secure 17-05-2025 21_23_51](https://github.com/user-attachments/assets/ac20fc59-451f-4556-92d3-751bd1fab07a)
 
 #### Verify access denial for unauthorized services
 1. Deploy the test pod:
@@ -172,7 +172,7 @@ kubectl apply -f test-auth-pod.yaml
 kubectl exec -n app -it test-auth -- bash
 aws --endpoint-url http://minio:9000 s3 ls
 ```
-![MINGW64__c_Users_Rajib_EKS-Style-secure 17-05-2025 21_28_08](https://github.com/user-attachments/assets/328ad9ea-6851-42b8-85bd-851cf01d00ac)
+![444878699-328ad9ea-6851-42b8-85bd-851cf01d00ac](https://github.com/user-attachments/assets/685cbdea-aac0-40f9-b8a1-18fbdab2a33f)
 
 
 
@@ -206,7 +206,7 @@ curl -H "Authorization: Bearer secret-token" http://localhost:8080/headers
 kubectl logs deploy/auth-service -n app
 ```
 
-![MINGW64__c_Users_Rajib_EKS-Style-secure 17-05-2025 22_01_25](https://github.com/user-attachments/assets/eec971da-58c5-4f15-b8e2-bf248d7905c6)
+![444867943-eec971da-58c5-4f15-b8e2-bf248d7905c6](https://github.com/user-attachments/assets/1e9aae00-a643-40c6-9c05-4b3bebf2748e)
 
 
 
@@ -239,7 +239,7 @@ curl http://local.test/headers
 
 output: ```403 Forbidden```
 
-![MINGW64__c_Users_Rajib_EKS-Style-secure 17-05-2025 22_41_05](https://github.com/user-attachments/assets/acca7e02-d8d7-45a1-b556-f799a92e19fd)
+![444868679-acca7e02-d8d7-45a1-b556-f799a92e19fd](https://github.com/user-attachments/assets/f9cbea95-572a-47ba-9ed0-d74486e4e32d)
 
 
 
@@ -271,7 +271,7 @@ kubectl apply -f allow-to-data-service.yaml
 kubectl run curl-test -n app --image=alpine/curl --restart=Never -- sh -c "curl http://data-service.app.svc.cluster.local:5678
 ```
 
-![MINGW64__c_Users_Rajib_EKS-Style-secure 17-05-2025 22_53_4222](https://github.com/user-attachments/assets/09f3693c-5149-440a-9758-9069d03d2b1c)
+![444869617-09f3693c-5149-440a-9758-9069d03d2b1c](https://github.com/user-attachments/assets/2caf3aae-7069-4f0d-9599-5201e953031c)
 
 
 Step 3: Prevent Future Leaks with Kyverno
@@ -293,8 +293,8 @@ Policy file:
 ```block-authorization-logging.yaml```
 
 
-![MINGW64__c_Users_Rajib_EKS-Style-secure 17-05-2025 23_50_33](https://github.com/user-attachments/assets/0fcd1505-bccf-4cb2-b196-3b1230d79893)
 
+![444870326-0fcd1505-bccf-4cb2-b196-3b1230d79893](https://github.com/user-attachments/assets/4fb6dd3b-478b-466d-8bce-76e700d9ca77)
 
 
 ---------------------------------
@@ -348,7 +348,7 @@ Port-forward the Grafana service:
 kubectl port-forward svc/monitoring-grafana -n monitoring 3000:80
 ```
 
-![MINGW64__c_Users_Rajib_EKS-Style-secure 18-05-2025 09_37_04](https://github.com/user-attachments/assets/befb86c5-7b34-4184-962b-bf6497813c2d)
+![444848496-befb86c5-7b34-4184-962b-bf6497813c2d](https://github.com/user-attachments/assets/3f01716c-3413-4769-bda3-59382c06ec2c)
 
 
 2.Open in browser: http://localhost:3000
@@ -372,7 +372,7 @@ kubectl get secret monitoring-grafana -n monitoring -o jsonpath="{.data.admin-pa
 
 * HTTP metrics (if you expose them via Prometheus): Custom or use dashboards for NGINX/Ingress
 
-  ![Kubernetes _ Compute Resources _ Pod - Dashboards - Grafana - Google Chrome 18-05-2025 09_39_42](https://github.com/user-attachments/assets/1c2e44c0-2e2e-4b45-9402-397683430e0a)
+![444848624-1c2e44c0-2e2e-4b45-9402-397683430e0a](https://github.com/user-attachments/assets/164f4dff-9631-4f15-8636-68e4dbcb650e)
 
 
 #### Set up an alert (in Prometheus or Grafana) for abnormal restarts or failed probes.
@@ -385,8 +385,8 @@ kubectl apply -f restart-alert.yaml
 
 * You’ll see it inside Prometheus Alerts UI (access via port-forward: svc/monitoring-kube-prometheus-stack-prometheus, port 9090)
   
-![Prometheus Time Series Collection and Processing Server - Google Chrome 18-05-2025 07_38_28](https://github.com/user-attachments/assets/f3b74eee-48bf-43c3-8513-19a04ffcb725)
 
+![444848362-f3b74eee-48bf-43c3-8513-19a04ffcb725](https://github.com/user-attachments/assets/1e5c1a8a-4614-4c1c-b64a-7291fc37e2e9)
 
 
 ---------------------------------
@@ -422,9 +422,9 @@ Expected recovery flow:
 
 * New pod reaches Running status
 
-![MINGW64__c_Users_Rajib_EKS-Style-secure 18-05-2025 08_08_02](https://github.com/user-attachments/assets/abb79ec3-0cea-46ae-a1e6-53f9a25a0fdb)
 
-  
+  ![444847984-abb79ec3-0cea-46ae-a1e6-53f9a25a0fdb](https://github.com/user-attachments/assets/c22daa48-4ee0-4922-aac4-cdadf25108a9)
+
 
 #### Observe in Grafana
 * Open Grafana:
@@ -432,6 +432,6 @@ Expected recovery flow:
 * Go to Dashboards → Browse → Kubernetes / Compute Resources / Pod (or any pod metrics dashboard).
 * Pod CPU / Memory: Look for spikes/drops during deletion.
 
-![Kubernetes _ Compute Resources _ Pod - Dashboards - Grafana - Google Chrome 19-05-2025 20_08_28](https://github.com/user-attachments/assets/8617be36-f76a-40e3-b394-289a651331f3)
+![445203497-8617be36-f76a-40e3-b394-289a651331f3](https://github.com/user-attachments/assets/a02b22d1-5ad8-49d5-b6e5-ca05ef553c96)
 
   
