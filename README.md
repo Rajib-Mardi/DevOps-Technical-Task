@@ -76,7 +76,6 @@ http://gateway.local
 ![444879896-710e1e84-f618-42b9-b69c-c732eb1553d5](https://github.com/user-attachments/assets/03960d44-ce08-4024-8303-7b047e5624f1)
 
 
-![Hello World - Google Chrome 17-05-2025 20_59_11](https://github.com/user-attachments/assets/f169643e-26d7-4939-82c1-582e55e3b72a)
 
 ![444880325-f169643e-26d7-4939-82c1-582e55e3b72a](https://github.com/user-attachments/assets/0da0e1d2-f513-44b6-a7c3-50319410e6b0)
 
